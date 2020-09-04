@@ -82,7 +82,8 @@ variable "cluster_secondary_range_name" {
 }
 
 variable "services_secondary_range_name" {
-  description = "ip-cidr-range-k8-service"
+  description = "The name of the clusters ip alias range used for services"
+  default = "ip-cidr-range-k8-service"
 }
 
 variable "master_ipv4_cidr_block" {
