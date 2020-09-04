@@ -22,7 +22,7 @@ variable "region" {
 
 
 variable "network" {
-  descriptionn = "The Google Cloud VPC(Network) to use"
+  description = "The Google Cloud VPC(Network) to use"
   default = "default"
 }
 
