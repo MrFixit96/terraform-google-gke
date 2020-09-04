@@ -22,6 +22,13 @@ variable "region" {
 
 
 variable "network" {
+  descriptionn = "The Google Cloud VPC(Network) to use"
+  default = "default"
+}
+
+variable "subnetwork_name" {
+  description = "Name of the subnetwork in VPC."
+  default = "default"
 }
 
 variable "initial_node_count" {
@@ -130,14 +137,6 @@ variable "use_ip_aliases" {
   default     = true
 }
 
-variable "create_subnetwork" {
-  description = "Whether or not to create a subnet for your cluster"
-}
-
-variable "subnetwork_name" {
-  description = "Name of the subnetwork in VPC."
-  default = "default"
-}
 
 variable "node_ipv4_cidr_block" {
   description = "IP address block to chose node addresses from"

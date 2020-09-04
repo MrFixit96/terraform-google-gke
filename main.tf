@@ -33,7 +33,6 @@ resource "google_container_cluster" "primary" {
   }
 
   ip_allocation_policy {
-    #use_ip_aliases = "${var.use_ip_aliases}"
 
     cluster_secondary_range_name  = var.cluster_secondary_range_name
     services_secondary_range_name = var.services_secondary_range_name
