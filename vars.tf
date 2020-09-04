@@ -61,7 +61,7 @@ variable "min_node_cout" {
 
 variable "max_node_count" {
   description = "Maximum number of nodes in the NodePool."
-  default 3
+  default = 3
 }
 
 variable "master_version" {
