@@ -35,16 +35,6 @@ resource "google_container_cluster" "primary" {
   ip_allocation_policy {
     #use_ip_aliases = "${var.use_ip_aliases}"
 
-    // Testing showed that these variables cannot be used if Subnetwork and Alias were already provisioned
-    /*
-   create_subnetwork = "${var.create_subnetwork}"
-   subnetwork_name = "${var.subnetwork_name}"   
-   node_ipv4_cidr_block = "${var.node_ipv4_cidr_block}"
-   cluster_ipv4_cidr_block = "${var.cluster_ipv4_cidr_block}"
-   services_ipv4_cidr_block = "${var.services_ipv4_cidr_block}"
-  */
-
-    // If subnetwork and alias are already created use the secondary range names below
     cluster_secondary_range_name  = var.cluster_secondary_range_name
     services_secondary_range_name = var.services_secondary_range_name
   }
