@@ -26,11 +26,11 @@ resource "google_container_cluster" "primary" {
 
   # Private Cluster
   # master ipv4 must be /28 and cannot overlap with any subnetwork in VPC network
-  private_cluster_config {
-    enable_private_endpoint = var.enable_private_endpoint
-    enable_private_nodes    = var.enable_private_nodes
-    master_ipv4_cidr_block  = var.master_ipv4_cidr_block
-  }
+ # private_cluster_config {
+ #   enable_private_endpoint = var.enable_private_endpoint
+ #   enable_private_nodes    = var.enable_private_nodes
+ #   master_ipv4_cidr_block  = var.master_ipv4_cidr_block
+ # }
 
   ip_allocation_policy {
 

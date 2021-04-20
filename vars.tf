@@ -88,6 +88,7 @@ variable "services_secondary_range_name" {
 
 variable "master_ipv4_cidr_block" {
   description = "The IP range in CIDR notation to use for the hosted master network (default is block all)"
+  default = null
 }
 
 variable "default_node_pool" {
