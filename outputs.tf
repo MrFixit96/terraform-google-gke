@@ -27,8 +27,8 @@ output "maintenance_policy" {
   value       = google_container_cluster.primary.maintenance_policy[0].daily_maintenance_window[0].duration
 }
 
-output "instance_group_list" {
-  description = "List of instance group URLs which have been assigned to the cluster."
-  value       = [google_container_cluster.primary.*.instance_group_urls]
-}
+# output "instance_group_list" {
+#  description = "List of instance group URLs which have been assigned to the cluster."
+#  value       = [google_container_cluster.primary.*.instance_group_urls]
+# }
 
